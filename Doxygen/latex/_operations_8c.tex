@@ -1,0 +1,207 @@
+\hypertarget{_operations_8c}{}\doxysection{Projeto-\//\+Operations.c File Reference}
+\label{_operations_8c}\index{Projeto-\//Operations.c@{Projeto-\//Operations.c}}
+
+
+Trabalho Pratico.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Dados.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_operations_8c_a6e88d0f6eb808bfd5349bb85e1d63dce}{Existe\+Operation}} (\mbox{\hyperlink{struct_operation}{Operation}} $\ast$h, int order)
+\begin{DoxyCompactList}\small\item\em Verifica se a operaçao existe. Se existir devolve Bool! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operation}{Operation}} $\ast$ \mbox{\hyperlink{_operations_8c_a29fe5453fec1619edd548c1aff8bbf44}{new\+Operation}} (int order, \mbox{\hyperlink{struct_machine}{Machine}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Cria nova \mbox{\hyperlink{struct_operation}{Operation}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operation}{Operation}} $\ast$ \mbox{\hyperlink{_operations_8c_ae49b1553075d0b5bc26543d21ad1473b}{Insert\+Operation\+End}} (\mbox{\hyperlink{struct_operation}{Operation}} $\ast$h, \mbox{\hyperlink{struct_operation}{Operation}} $\ast$new)
+\begin{DoxyCompactList}\small\item\em Insere \mbox{\hyperlink{struct_operation}{Operation}} no final da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_operations_8c_afa774148957cf5d0ec2ce3e0ab364910}{Insert\+Operation\+On\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, \mbox{\hyperlink{struct_operation}{Operation}} $\ast$c, int id)
+\begin{DoxyCompactList}\small\item\em Insere \mbox{\hyperlink{struct_operation}{Operation}} no final da Lista dentro de um \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_operations_8c_a569b710fbf8767980b55da4c1b2cb734}{Change\+Operation}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, int order, \mbox{\hyperlink{struct_operation}{Operation}} $\ast$new)
+\begin{DoxyCompactList}\small\item\em Altera tipo de \mbox{\hyperlink{struct_operation}{Operation}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_operations_8c_a857f7a7f1db12eef98d3e80ae02d1efd}{Remove\+Operation}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, \mbox{\hyperlink{struct_operation}{Operation}} $\ast$c, int id, int order)
+\begin{DoxyCompactList}\small\item\em Remove \mbox{\hyperlink{struct_operation}{Operation}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operation}{Operation}} $\ast$ \mbox{\hyperlink{_operations_8c_a57afeb259b4701a57e0fd706a794175f}{Search\+Operation}} (\mbox{\hyperlink{struct_operation}{Operation}} $\ast$h, int order)
+\begin{DoxyCompactList}\small\item\em Procura operation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operation}{Operation}} $\ast$ \mbox{\hyperlink{_operations_8c_a31adb12147fed84f42bc7e744503b49c}{Change\+Operation\+Machine}} (\mbox{\hyperlink{struct_operation}{Operation}} $\ast$op, int order, int machineid, int time)
+\item 
+\mbox{\hyperlink{struct_operation}{Operation}} $\ast$ \mbox{\hyperlink{_operations_8c_a2d5ccc918ecdcff3d66bd8cab462c07b}{remove\+Operation}} (\mbox{\hyperlink{struct_operation}{Operation}} $\ast$operations, int order)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trabalho Pratico. 
+
+\begin{DoxyAuthor}{Author}
+Henrique Azevedo @email \href{mailto:henrique.aazevedo29@gmail.com}{\texttt{ henrique.\+aazevedo29@gmail.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022
+\end{DoxyDate}
+Operaçoes responsaveis pela Criação/\+Modificaçao da Estrutura Dinamica ligada às Operaçoes.
+
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000007}{Bug}}]bugs desconhecidos. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_operations_8c_a569b710fbf8767980b55da4c1b2cb734}\label{_operations_8c_a569b710fbf8767980b55da4c1b2cb734}} 
+\index{Operations.c@{Operations.c}!ChangeOperation@{ChangeOperation}}
+\index{ChangeOperation@{ChangeOperation}!Operations.c@{Operations.c}}
+\doxysubsubsection{\texorpdfstring{ChangeOperation()}{ChangeOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Change\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{int}]{order,  }\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{new }\end{DoxyParamCaption})}
+
+
+
+Altera tipo de \mbox{\hyperlink{struct_operation}{Operation}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Apontador para inicio da Lista de Jobs \\
+\hline
+\mbox{\texttt{ in}}  & {\em order} & Ordem da \mbox{\hyperlink{struct_operation}{Operation}} a alterar \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Apontador para inicio da Lista Nova de Operaçoes que pretende alterar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para Lista de Jobs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_operations_8c_a31adb12147fed84f42bc7e744503b49c}\label{_operations_8c_a31adb12147fed84f42bc7e744503b49c}} 
+\index{Operations.c@{Operations.c}!ChangeOperationMachine@{ChangeOperationMachine}}
+\index{ChangeOperationMachine@{ChangeOperationMachine}!Operations.c@{Operations.c}}
+\doxysubsubsection{\texorpdfstring{ChangeOperationMachine()}{ChangeOperationMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation}{Operation}} $\ast$ Change\+Operation\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{op,  }\item[{int}]{order,  }\item[{int}]{machineid,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_operations_8c_a6e88d0f6eb808bfd5349bb85e1d63dce}\label{_operations_8c_a6e88d0f6eb808bfd5349bb85e1d63dce}} 
+\index{Operations.c@{Operations.c}!ExisteOperation@{ExisteOperation}}
+\index{ExisteOperation@{ExisteOperation}!Operations.c@{Operations.c}}
+\doxysubsubsection{\texorpdfstring{ExisteOperation()}{ExisteOperation()}}
+{\footnotesize\ttfamily bool Existe\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{h,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+
+
+Verifica se a operaçao existe. Se existir devolve Bool! 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista \\
+\hline
+\mbox{\texttt{ in}}  & {\em order} & código do \mbox{\hyperlink{struct_operation}{Operation}} a procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True/\+False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_operations_8c_ae49b1553075d0b5bc26543d21ad1473b}\label{_operations_8c_ae49b1553075d0b5bc26543d21ad1473b}} 
+\index{Operations.c@{Operations.c}!InsertOperationEnd@{InsertOperationEnd}}
+\index{InsertOperationEnd@{InsertOperationEnd}!Operations.c@{Operations.c}}
+\doxysubsubsection{\texorpdfstring{InsertOperationEnd()}{InsertOperationEnd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation}{Operation}} $\ast$ Insert\+Operation\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{new }\end{DoxyParamCaption})}
+
+
+
+Insere \mbox{\hyperlink{struct_operation}{Operation}} no final da lista. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista \\
+\hline
+\mbox{\texttt{ in}}  & {\em new} & Nova \mbox{\hyperlink{struct_operation}{Operation}} a inserir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inicio da Lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_operations_8c_afa774148957cf5d0ec2ce3e0ab364910}\label{_operations_8c_afa774148957cf5d0ec2ce3e0ab364910}} 
+\index{Operations.c@{Operations.c}!InsertOperationOnJob@{InsertOperationOnJob}}
+\index{InsertOperationOnJob@{InsertOperationOnJob}!Operations.c@{Operations.c}}
+\doxysubsubsection{\texorpdfstring{InsertOperationOnJob()}{InsertOperationOnJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Insert\+Operation\+On\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{c,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Insere \mbox{\hyperlink{struct_operation}{Operation}} no final da Lista dentro de um \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista de Jobs \\
+\hline
+\mbox{\texttt{ in}}  & {\em hc} & Inicio da Lista de Operaçoes \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & id do Jobs onde é desejado inserir operaçao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+NULL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_operations_8c_a29fe5453fec1619edd548c1aff8bbf44}\label{_operations_8c_a29fe5453fec1619edd548c1aff8bbf44}} 
+\index{Operations.c@{Operations.c}!newOperation@{newOperation}}
+\index{newOperation@{newOperation}!Operations.c@{Operations.c}}
+\doxysubsubsection{\texorpdfstring{newOperation()}{newOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation}{Operation}} $\ast$ new\+Operation (\begin{DoxyParamCaption}\item[{int}]{order,  }\item[{\mbox{\hyperlink{struct_machine}{Machine}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Cria nova \mbox{\hyperlink{struct_operation}{Operation}}. 
+
+Aloca memória necessária para armazenar um \mbox{\hyperlink{struct_operation}{Operation}} em memória
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Ordem da \mbox{\hyperlink{struct_operation}{Operation}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_operations_8c_a857f7a7f1db12eef98d3e80ae02d1efd}\label{_operations_8c_a857f7a7f1db12eef98d3e80ae02d1efd}} 
+\index{Operations.c@{Operations.c}!RemoveOperation@{RemoveOperation}}
+\index{RemoveOperation@{RemoveOperation}!Operations.c@{Operations.c}}
+\doxysubsubsection{\texorpdfstring{RemoveOperation()}{RemoveOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Remove\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{c,  }\item[{int}]{id,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+
+
+Remove \mbox{\hyperlink{struct_operation}{Operation}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Apontador para inicio da Lista de JObs \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Apontador para inicio da Lista de Operations \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & Ordem do id do \mbox{\hyperlink{struct_job}{Job}} da \mbox{\hyperlink{struct_operation}{Operation}}. \\
+\hline
+\mbox{\texttt{ in}}  & {\em order} & Ordem do \mbox{\hyperlink{struct_operation}{Operation}} a remover. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para Lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_operations_8c_a2d5ccc918ecdcff3d66bd8cab462c07b}\label{_operations_8c_a2d5ccc918ecdcff3d66bd8cab462c07b}} 
+\index{Operations.c@{Operations.c}!removeOperation@{removeOperation}}
+\index{removeOperation@{removeOperation}!Operations.c@{Operations.c}}
+\doxysubsubsection{\texorpdfstring{removeOperation()}{removeOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation}{Operation}} $\ast$ remove\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{operations,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_operations_8c_a57afeb259b4701a57e0fd706a794175f}\label{_operations_8c_a57afeb259b4701a57e0fd706a794175f}} 
+\index{Operations.c@{Operations.c}!SearchOperation@{SearchOperation}}
+\index{SearchOperation@{SearchOperation}!Operations.c@{Operations.c}}
+\doxysubsubsection{\texorpdfstring{SearchOperation()}{SearchOperation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operation}{Operation}} $\ast$ Search\+Operation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{h,  }\item[{int}]{order }\end{DoxyParamCaption})}
+
+
+
+Procura operation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Apontador para inicio da Lista \\
+\hline
+\mbox{\texttt{ in}}  & {\em order} & Order do \mbox{\hyperlink{struct_operation}{Operation}} a alterar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para Lista 
+\end{DoxyReturn}

@@ -1,0 +1,190 @@
+\hypertarget{_hash_8c}{}\doxysection{Projeto-\//\+Hash.c File Reference}
+\label{_hash_8c}\index{Projeto-\//Hash.c@{Projeto-\//Hash.c}}
+
+
+Trabalho Pratico.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Dados.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_hash_8c_a494e5944013274ba87d97e98fa81f334}{Hash\+Function}} (int id)
+\begin{DoxyCompactList}\small\item\em Funçao\+Hash. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_hash_8c_a9d9ca1ffba7d78ef306e0481dc66b4b2}{Build\+Hash}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$table\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Construir a tabela hash. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_dados_8h_a2003b620d4ff87d4391ca70f1f36610e}{JobI}} $\ast$$\ast$ \mbox{\hyperlink{_hash_8c_af0dba363d69ca57b1843de78a6ad141f}{Add\+Job\+Hash}} (\mbox{\hyperlink{_dados_8h_a2003b620d4ff87d4391ca70f1f36610e}{JobI}} $\ast$h, \mbox{\hyperlink{_dados_8h_a2003b620d4ff87d4391ca70f1f36610e}{JobI}} $\ast$table\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Adicionar um \mbox{\hyperlink{struct_job}{Job}} à tabela hash. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$$\ast$ \mbox{\hyperlink{_hash_8c_ad7b82e7544c37bcb05a2d3c6556bef6a}{remove\+Hash\+Job}} (int id, \mbox{\hyperlink{struct_job}{Job}} $\ast$table\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Remover Um job da Hash table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$$\ast$ \mbox{\hyperlink{_hash_8c_a746f93eebf6d6ffb676a80e01d27dc14}{Insert\+Opon\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$table\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{struct_operation}{Operation}} $\ast$operation, int id)
+\begin{DoxyCompactList}\small\item\em Inserir Operação no \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$$\ast$ \mbox{\hyperlink{_hash_8c_a6342f4d5c2f717da9b1fbe500359f760}{Remove\+Op\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$table\mbox{[}$\,$\mbox{]}, int order, int id)
+\begin{DoxyCompactList}\small\item\em Remover Operação do \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$$\ast$ \mbox{\hyperlink{_hash_8c_a6070c7ec2ee4ad89480e5878e643be9a}{Change\+Op}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$table\mbox{[}$\,$\mbox{]}, int id, int order, int machine\+Id, int time)
+\begin{DoxyCompactList}\small\item\em Mudar Operação do \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trabalho Pratico. 
+
+\begin{DoxyAuthor}{Author}
+Henrique Azevedo @email \href{mailto:henrique.aazevedo29@gmail.com}{\texttt{ henrique.\+aazevedo29@gmail.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000003}{Bug}}]bugs desconhecidos. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_hash_8c_af0dba363d69ca57b1843de78a6ad141f}\label{_hash_8c_af0dba363d69ca57b1843de78a6ad141f}} 
+\index{Hash.c@{Hash.c}!AddJobHash@{AddJobHash}}
+\index{AddJobHash@{AddJobHash}!Hash.c@{Hash.c}}
+\doxysubsubsection{\texorpdfstring{AddJobHash()}{AddJobHash()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_dados_8h_a2003b620d4ff87d4391ca70f1f36610e}{JobI}} $\ast$$\ast$ Add\+Job\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_dados_8h_a2003b620d4ff87d4391ca70f1f36610e}{JobI}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{_dados_8h_a2003b620d4ff87d4391ca70f1f36610e}{JobI}} $\ast$}]{table\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Adicionar um \mbox{\hyperlink{struct_job}{Job}} à tabela hash. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista dos Jobs \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\mbox{[}$\,$\mbox{]}} & tabela hash\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tabela hash 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_hash_8c_a9d9ca1ffba7d78ef306e0481dc66b4b2}\label{_hash_8c_a9d9ca1ffba7d78ef306e0481dc66b4b2}} 
+\index{Hash.c@{Hash.c}!BuildHash@{BuildHash}}
+\index{BuildHash@{BuildHash}!Hash.c@{Hash.c}}
+\doxysubsubsection{\texorpdfstring{BuildHash()}{BuildHash()}}
+{\footnotesize\ttfamily void Build\+Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{table\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Construir a tabela hash. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em table\mbox{[}$\,$\mbox{]}} & tabela hash \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & tamanho da tabela ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_hash_8c_a6070c7ec2ee4ad89480e5878e643be9a}\label{_hash_8c_a6070c7ec2ee4ad89480e5878e643be9a}} 
+\index{Hash.c@{Hash.c}!ChangeOp@{ChangeOp}}
+\index{ChangeOp@{ChangeOp}!Hash.c@{Hash.c}}
+\doxysubsubsection{\texorpdfstring{ChangeOp()}{ChangeOp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$$\ast$ Change\+Op (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{table\mbox{[}$\,$\mbox{]},  }\item[{int}]{id,  }\item[{int}]{order,  }\item[{int}]{machine\+Id,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+
+
+Mudar Operação do \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em table\mbox{[}$\,$\mbox{]}} & tabela hash \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & Id do \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em order} & Ordem da Operação \\
+\hline
+\mbox{\texttt{ in}}  & {\em machine\+Id} & Id da maquina \\
+\hline
+\mbox{\texttt{ in}}  & {\em time} & tempo da maquina\\
+\hline
+\end{DoxyParams}
+$\ast$\begin{DoxyReturn}{Returns}
+tabela hash 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_hash_8c_a494e5944013274ba87d97e98fa81f334}\label{_hash_8c_a494e5944013274ba87d97e98fa81f334}} 
+\index{Hash.c@{Hash.c}!HashFunction@{HashFunction}}
+\index{HashFunction@{HashFunction}!Hash.c@{Hash.c}}
+\doxysubsubsection{\texorpdfstring{HashFunction()}{HashFunction()}}
+{\footnotesize\ttfamily int Hash\+Function (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Funçao\+Hash. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & Id do job\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resultado da função Hash, que determina a posiçao onde fica o job 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_hash_8c_a746f93eebf6d6ffb676a80e01d27dc14}\label{_hash_8c_a746f93eebf6d6ffb676a80e01d27dc14}} 
+\index{Hash.c@{Hash.c}!InsertOponJob@{InsertOponJob}}
+\index{InsertOponJob@{InsertOponJob}!Hash.c@{Hash.c}}
+\doxysubsubsection{\texorpdfstring{InsertOponJob()}{InsertOponJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$$\ast$ Insert\+Opon\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{table\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{operation,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Inserir Operação no \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em table\mbox{[}$\,$\mbox{]}} & tabela hash \\
+\hline
+\mbox{\texttt{ in}}  & {\em order} & Ordem da Operação \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & Id do \mbox{\hyperlink{struct_job}{Job}}\\
+\hline
+\end{DoxyParams}
+$\ast$\begin{DoxyReturn}{Returns}
+tabela hash 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_hash_8c_ad7b82e7544c37bcb05a2d3c6556bef6a}\label{_hash_8c_ad7b82e7544c37bcb05a2d3c6556bef6a}} 
+\index{Hash.c@{Hash.c}!removeHashJob@{removeHashJob}}
+\index{removeHashJob@{removeHashJob}!Hash.c@{Hash.c}}
+\doxysubsubsection{\texorpdfstring{removeHashJob()}{removeHashJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$$\ast$ remove\+Hash\+Job (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{table\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Remover Um job da Hash table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID jo \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em table\mbox{[}$\,$\mbox{]}} & tabela hash\\
+\hline
+\end{DoxyParams}
+$\ast$\begin{DoxyReturn}{Returns}
+tabela hash 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_hash_8c_a6342f4d5c2f717da9b1fbe500359f760}\label{_hash_8c_a6342f4d5c2f717da9b1fbe500359f760}} 
+\index{Hash.c@{Hash.c}!RemoveOpJob@{RemoveOpJob}}
+\index{RemoveOpJob@{RemoveOpJob}!Hash.c@{Hash.c}}
+\doxysubsubsection{\texorpdfstring{RemoveOpJob()}{RemoveOpJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$$\ast$ Remove\+Op\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{table\mbox{[}$\,$\mbox{]},  }\item[{int}]{order,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Remover Operação do \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em table\mbox{[}$\,$\mbox{]}} & tabela hash \\
+\hline
+\mbox{\texttt{ in}}  & {\em order} & Ordem da Operação \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & Id do \mbox{\hyperlink{struct_job}{Job}}\\
+\hline
+\end{DoxyParams}
+$\ast$\begin{DoxyReturn}{Returns}
+tabela hash 
+\end{DoxyReturn}

@@ -1,0 +1,151 @@
+\hypertarget{gestor_8c}{}\doxysection{Projeto-\//gestor.c File Reference}
+\label{gestor_8c}\index{Projeto-\//gestor.c@{Projeto-\//gestor.c}}
+
+
+Trabalho Pratico.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Dados.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{gestor_8c_a7670bd52f958cd3f35f6a8eba950969f}{getmintime}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinar a quantidade minima de tempo pra completar um \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{gestor_8c_a197603666681bc6e6a7be224669647c5}{getmaxtime}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinar a quantidade maximo de tempo pra completar um \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{gestor_8c_a5688d8ae035125e40940d9b5b2714361}{getavgtime}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinar a quantidade media de tempo pra completar um \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{gestor_8c_a87dd754061a79fe1f09902ba85bdc76f}{Process\+Plan\+Min\+Time}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$table\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Determinar a quantidade minima de tempo pra completar o processplan. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{gestor_8c_a7ed6545021e8928fec828b609552c92b}{numberof\+Jobs}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinar a quantidade de Jobs existentes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{gestor_8c_a597316295de92d7fb87211779109156a}{numberofoperationsp\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, int id)
+\begin{DoxyCompactList}\small\item\em Determinar a quantidade de operacoes num determinado JOB. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trabalho Pratico. 
+
+\begin{DoxyAuthor}{Author}
+Henrique Azevedo @email \href{mailto:henrique.aazevedo29@gmail.com}{\texttt{ henrique.\+aazevedo29@gmail.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022
+\end{DoxyDate}
+Funçoes com o objetivo de gerir e verificar como funcionam as operaçoes.
+
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000002}{Bug}}]bugs desconhecidos. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gestor_8c_a5688d8ae035125e40940d9b5b2714361}\label{gestor_8c_a5688d8ae035125e40940d9b5b2714361}} 
+\index{gestor.c@{gestor.c}!getavgtime@{getavgtime}}
+\index{getavgtime@{getavgtime}!gestor.c@{gestor.c}}
+\doxysubsubsection{\texorpdfstring{getavgtime()}{getavgtime()}}
+{\footnotesize\ttfamily int getavgtime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinar a quantidade media de tempo pra completar um \mbox{\hyperlink{struct_job}{Job}}. 
+
+Devolve o tempo medio pra completar um job
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Inicio da Lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{gestor_8c_a197603666681bc6e6a7be224669647c5}\label{gestor_8c_a197603666681bc6e6a7be224669647c5}} 
+\index{gestor.c@{gestor.c}!getmaxtime@{getmaxtime}}
+\index{getmaxtime@{getmaxtime}!gestor.c@{gestor.c}}
+\doxysubsubsection{\texorpdfstring{getmaxtime()}{getmaxtime()}}
+{\footnotesize\ttfamily int getmaxtime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinar a quantidade maximo de tempo pra completar um \mbox{\hyperlink{struct_job}{Job}}. 
+
+Devolve o tempo maximo pra completar um job
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Inicio da Lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{gestor_8c_a7670bd52f958cd3f35f6a8eba950969f}\label{gestor_8c_a7670bd52f958cd3f35f6a8eba950969f}} 
+\index{gestor.c@{gestor.c}!getmintime@{getmintime}}
+\index{getmintime@{getmintime}!gestor.c@{gestor.c}}
+\doxysubsubsection{\texorpdfstring{getmintime()}{getmintime()}}
+{\footnotesize\ttfamily int getmintime (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinar a quantidade minima de tempo pra completar um \mbox{\hyperlink{struct_job}{Job}}. 
+
+Devolve o tempo minimo pra completar um job
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Inicio da Lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{gestor_8c_a7ed6545021e8928fec828b609552c92b}\label{gestor_8c_a7ed6545021e8928fec828b609552c92b}} 
+\index{gestor.c@{gestor.c}!numberofJobs@{numberofJobs}}
+\index{numberofJobs@{numberofJobs}!gestor.c@{gestor.c}}
+\doxysubsubsection{\texorpdfstring{numberofJobs()}{numberofJobs()}}
+{\footnotesize\ttfamily int numberof\+Jobs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinar a quantidade de Jobs existentes. 
+
+Devolve a quantidade de Jobs existentes
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Inicio da Lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{gestor_8c_a597316295de92d7fb87211779109156a}\label{gestor_8c_a597316295de92d7fb87211779109156a}} 
+\index{gestor.c@{gestor.c}!numberofoperationspJob@{numberofoperationspJob}}
+\index{numberofoperationspJob@{numberofoperationspJob}!gestor.c@{gestor.c}}
+\doxysubsubsection{\texorpdfstring{numberofoperationspJob()}{numberofoperationspJob()}}
+{\footnotesize\ttfamily int numberofoperationsp\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Determinar a quantidade de operacoes num determinado JOB. 
+
+Devolve a quantidade de operacoes num determinado JOB
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & Inicio da Lista \\
+\hline
+{\em id} & Id do job para analisar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{gestor_8c_a87dd754061a79fe1f09902ba85bdc76f}\label{gestor_8c_a87dd754061a79fe1f09902ba85bdc76f}} 
+\index{gestor.c@{gestor.c}!ProcessPlanMinTime@{ProcessPlanMinTime}}
+\index{ProcessPlanMinTime@{ProcessPlanMinTime}!gestor.c@{gestor.c}}
+\doxysubsubsection{\texorpdfstring{ProcessPlanMinTime()}{ProcessPlanMinTime()}}
+{\footnotesize\ttfamily int Process\+Plan\+Min\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{table\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Determinar a quantidade minima de tempo pra completar o processplan. 
+
+Devolve o tempo minimo pra completar o processplan
+
+
+\begin{DoxyParams}{Parameters}
+{\em table} & Inicio da Hash\+Table \\
+\hline
+{\em size} & tamanho da hashtable \\
+\hline
+\end{DoxyParams}

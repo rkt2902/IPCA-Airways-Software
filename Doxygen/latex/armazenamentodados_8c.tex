@@ -1,0 +1,73 @@
+\hypertarget{armazenamentodados_8c}{}\doxysection{Projeto-\//armazenamentodados.c File Reference}
+\label{armazenamentodados_8c}\index{Projeto-\//armazenamentodados.c@{Projeto-\//armazenamentodados.c}}
+
+
+Trabalho Pratico.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$locale.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Dados.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{armazenamentodados_8c_a9200b2247e32d54d5e4023cebe6366ff}{Readdatatxt}} (char $\ast$nome\+Ficheiro)
+\begin{DoxyCompactList}\small\item\em Ler os dados atravez de um ficheiro de texto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{armazenamentodados_8c_a9ce49bc6b96512a2399e5eb893348387}{Savedatatxt}} (char $\ast$nome\+Ficheiro, \mbox{\hyperlink{struct_job}{Job}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Guardar dados num ficheiro de texto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trabalho Pratico. 
+
+\begin{DoxyAuthor}{Author}
+Henrique Azevedo @email \href{mailto:henrique.aazevedo29@gmail.com}{\texttt{ henrique.\+aazevedo29@gmail.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022
+\end{DoxyDate}
+Armazenamento das Estruturas e dos Dados Inseridos
+
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]bugs desconhecidos. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{armazenamentodados_8c_a9200b2247e32d54d5e4023cebe6366ff}\label{armazenamentodados_8c_a9200b2247e32d54d5e4023cebe6366ff}} 
+\index{armazenamentodados.c@{armazenamentodados.c}!Readdatatxt@{Readdatatxt}}
+\index{Readdatatxt@{Readdatatxt}!armazenamentodados.c@{armazenamentodados.c}}
+\doxysubsubsection{\texorpdfstring{Readdatatxt()}{Readdatatxt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Readdatatxt (\begin{DoxyParamCaption}\item[{char $\ast$}]{nome\+Ficheiro }\end{DoxyParamCaption})}
+
+
+
+Ler os dados atravez de um ficheiro de texto. 
+
+Lê da memoria dados previamente inseridos em um ficheiro
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & Nome do ficheiro de texto que se pretende ler \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{armazenamentodados_8c_a9ce49bc6b96512a2399e5eb893348387}\label{armazenamentodados_8c_a9ce49bc6b96512a2399e5eb893348387}} 
+\index{armazenamentodados.c@{armazenamentodados.c}!Savedatatxt@{Savedatatxt}}
+\index{Savedatatxt@{Savedatatxt}!armazenamentodados.c@{armazenamentodados.c}}
+\doxysubsubsection{\texorpdfstring{Savedatatxt()}{Savedatatxt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Savedatatxt (\begin{DoxyParamCaption}\item[{char $\ast$}]{nome\+Ficheiro,  }\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Guardar dados num ficheiro de texto. 
+
+Guarda em memoria os dados inseridos/carregados.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & Nome do ficheiro de texto onde se pretende guardar dados. \\
+\hline
+{\em h} & Inicio da Lista \\
+\hline
+\end{DoxyParams}

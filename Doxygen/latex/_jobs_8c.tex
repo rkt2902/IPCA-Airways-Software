@@ -1,0 +1,195 @@
+\hypertarget{_jobs_8c}{}\doxysection{Projeto-\//\+Jobs.c File Reference}
+\label{_jobs_8c}\index{Projeto-\//Jobs.c@{Projeto-\//Jobs.c}}
+
+
+Trabalho Pratico.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Dados.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_jobs_8c_ad2ed0a104bde56c5110cb3877dc3efb7}{Existe\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, int id)
+\begin{DoxyCompactList}\small\item\em Verifica se job existe. Se existir devolve Bool! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_jobs_8c_a84de6ff490cb65dbc4995f2d8b98de1f}{new\+Job}} (int id)
+\begin{DoxyCompactList}\small\item\em Cria novo \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_jobs_8c_a31f3c451e888e2ebfc71fb2d01ad31d3}{Insert\+Job\+Start}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, \mbox{\hyperlink{struct_job}{Job}} $\ast$new)
+\begin{DoxyCompactList}\small\item\em Insere um novo \mbox{\hyperlink{struct_job}{Job}} no início da estrutura. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_jobs_8c_a505e2efc62d04db23ea7537fe973e705}{Insert\+Job\+End}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, \mbox{\hyperlink{struct_job}{Job}} $\ast$new)
+\begin{DoxyCompactList}\small\item\em Insere \mbox{\hyperlink{struct_job}{Job}} no final da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_jobs_8c_a8f793260f4c950fcac7f69894159da3b}{Search\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, int id)
+\begin{DoxyCompactList}\small\item\em Verifica se \mbox{\hyperlink{struct_job}{Job}} existe. Se existir devolve endereço Job! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_jobs_8c_a0e9078d6048868a65c51c49746b54dbc}{Change\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, int id, \mbox{\hyperlink{struct_job}{Job}} $\ast$new)
+\begin{DoxyCompactList}\small\item\em Altera tipo de \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_jobs_8c_abb13585a796c7e4502ce817470bbe4e4}{Remove\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$h, int id)
+\begin{DoxyCompactList}\small\item\em Remove \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trabalho Pratico. 
+
+\begin{DoxyAuthor}{Author}
+Henrique Azevedo @email \href{mailto:henrique.aazevedo29@gmail.com}{\texttt{ henrique.\+aazevedo29@gmail.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022
+\end{DoxyDate}
+Operaçoes responsaveis pela Criação/\+Modificaçao da Estrutura Dinamica ligada aos Jobs.
+
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000004}{Bug}}]bugs desconhecidos. \end{DoxyRefDesc}
+
+
+\begin{DoxyAuthor}{Author}
+Henrique Azevedo @email \href{mailto:henrique.aazevedo29@gmail.com}{\texttt{ henrique.\+aazevedo29@gmail.\+com}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022
+\end{DoxyDate}
+Operaçoes responsaveis pela Criação/\+Modificaçao da Estrutura Dinamica ligada às Maquinas.
+
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000005}{Bug}}]bugs desconhecidos. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_jobs_8c_a0e9078d6048868a65c51c49746b54dbc}\label{_jobs_8c_a0e9078d6048868a65c51c49746b54dbc}} 
+\index{Jobs.c@{Jobs.c}!ChangeJob@{ChangeJob}}
+\index{ChangeJob@{ChangeJob}!Jobs.c@{Jobs.c}}
+\doxysubsubsection{\texorpdfstring{ChangeJob()}{ChangeJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Change\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{int}]{id,  }\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{new }\end{DoxyParamCaption})}
+
+
+
+Altera tipo de \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Apontador para inicio da Lista \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & ID do \mbox{\hyperlink{struct_job}{Job}} a alterar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para Lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_jobs_8c_ad2ed0a104bde56c5110cb3877dc3efb7}\label{_jobs_8c_ad2ed0a104bde56c5110cb3877dc3efb7}} 
+\index{Jobs.c@{Jobs.c}!ExisteJob@{ExisteJob}}
+\index{ExisteJob@{ExisteJob}!Jobs.c@{Jobs.c}}
+\doxysubsubsection{\texorpdfstring{ExisteJob()}{ExisteJob()}}
+{\footnotesize\ttfamily bool Existe\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Verifica se job existe. Se existir devolve Bool! 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & código do job a procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True/\+False 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_jobs_8c_a505e2efc62d04db23ea7537fe973e705}\label{_jobs_8c_a505e2efc62d04db23ea7537fe973e705}} 
+\index{Jobs.c@{Jobs.c}!InsertJobEnd@{InsertJobEnd}}
+\index{InsertJobEnd@{InsertJobEnd}!Jobs.c@{Jobs.c}}
+\doxysubsubsection{\texorpdfstring{InsertJobEnd()}{InsertJobEnd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Insert\+Job\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{new }\end{DoxyParamCaption})}
+
+
+
+Insere \mbox{\hyperlink{struct_job}{Job}} no final da lista. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista \\
+\hline
+\mbox{\texttt{ in}}  & {\em nnew} & Novo \mbox{\hyperlink{struct_job}{Job}} a inserir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inicio da Lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_jobs_8c_a31f3c451e888e2ebfc71fb2d01ad31d3}\label{_jobs_8c_a31f3c451e888e2ebfc71fb2d01ad31d3}} 
+\index{Jobs.c@{Jobs.c}!InsertJobStart@{InsertJobStart}}
+\index{InsertJobStart@{InsertJobStart}!Jobs.c@{Jobs.c}}
+\doxysubsubsection{\texorpdfstring{InsertJobStart()}{InsertJobStart()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Insert\+Job\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{new }\end{DoxyParamCaption})}
+
+
+
+Insere um novo \mbox{\hyperlink{struct_job}{Job}} no início da estrutura. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista \\
+\hline
+\mbox{\texttt{ in}}  & {\em new} & Novo \mbox{\hyperlink{struct_job}{Job}} a inserir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inicio da Lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_jobs_8c_a84de6ff490cb65dbc4995f2d8b98de1f}\label{_jobs_8c_a84de6ff490cb65dbc4995f2d8b98de1f}} 
+\index{Jobs.c@{Jobs.c}!newJob@{newJob}}
+\index{newJob@{newJob}!Jobs.c@{Jobs.c}}
+\doxysubsubsection{\texorpdfstring{newJob()}{newJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ new\+Job (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Cria novo \mbox{\hyperlink{struct_job}{Job}}. 
+
+Aloca memória necessária para armazenar um \mbox{\hyperlink{struct_job}{Job}} em memória
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID do \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_jobs_8c_abb13585a796c7e4502ce817470bbe4e4}\label{_jobs_8c_abb13585a796c7e4502ce817470bbe4e4}} 
+\index{Jobs.c@{Jobs.c}!RemoveJob@{RemoveJob}}
+\index{RemoveJob@{RemoveJob}!Jobs.c@{Jobs.c}}
+\doxysubsubsection{\texorpdfstring{RemoveJob()}{RemoveJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Remove\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Remove \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Apontador para inicio da Lista \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & ID do \mbox{\hyperlink{struct_job}{Job}} a alterar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para Lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_jobs_8c_a8f793260f4c950fcac7f69894159da3b}\label{_jobs_8c_a8f793260f4c950fcac7f69894159da3b}} 
+\index{Jobs.c@{Jobs.c}!SearchJob@{SearchJob}}
+\index{SearchJob@{SearchJob}!Jobs.c@{Jobs.c}}
+\doxysubsubsection{\texorpdfstring{SearchJob()}{SearchJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ Search\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{h,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Verifica se \mbox{\hyperlink{struct_job}{Job}} existe. Se existir devolve endereço Job! 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & ID do \mbox{\hyperlink{struct_job}{Job}} a procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para \mbox{\hyperlink{struct_job}{Job}} encontrado 
+\end{DoxyReturn}
